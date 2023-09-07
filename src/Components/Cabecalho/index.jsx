@@ -10,7 +10,6 @@ const HeaderEstilizado = styled.header`
         max-width: 212;
     }
 `
-
 const Cabecalho = () => {
     return(
         <HeaderEstilizado>

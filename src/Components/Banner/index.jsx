@@ -1,7 +1,9 @@
 import { styled } from "styled-components"
-import BannerFundo from './Banner.png'
 
 const FigureEstilizada = styled.figure`
+    background-image: ${props => `url(${props.$backgroundImage})`};
+    flex-grow: 1;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     min-height: 328px;
@@ -10,11 +12,10 @@ const FigureEstilizada = styled.figure`
     max-width: 100%;
 `
 
-const Banner = () => {
-    return (
-    <FigureEstilizada>
-        <img src={BannerFundo} alt="Banner principal" />
+
+const Banner = ({ backgroundImage}) => {
+    return (<FigureEstilizada $backgroundImage={backgroundImage}>
     </FigureEstilizada>)
 }
 
-export default Banner;
+export default Banner
